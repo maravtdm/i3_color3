@@ -1,12 +1,14 @@
 # i3
 ### My I3 config files : i3-gaps + polybar
 
-#### Must have :
-- i3-gaps-next-git
-- polybar
-- feh ranger terminator urxvt termite ncmpcpp mpd light yay lm_sensors
-- pulseaudio acpi ethtool network-manager
-- awesome-terminal-fonts, ttf-font-awesome-4
+Conf : 
+Arch Linux
+
+#### Dependencies :
+- i3-gaps-next-git polybar
+- feh ranger terminator urxvt termite ncmpcpp mpd light yay lm_sensors pulseaudio acpi ethtool network-manager 
+- pcmanfm 
+Font : awesome-terminal-fonts ttf-font-awesome-4 
 
 #### How To :
 - put all files in your ~/.config directory
