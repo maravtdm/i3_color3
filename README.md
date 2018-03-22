@@ -6,8 +6,8 @@ Arch Linux
 
 #### Dependencies :
 - i3-gaps-next-git polybar
-- feh ranger terminator urxvt termite ncmpcpp mpd light yay lm_sensors pulseaudio acpi ethtool network-manager 
-- pcmanfm 
+- feh alsi compton rofi dmenu ranger terminator urxvt termite ncmpcpp mpd light yay lm_sensors pulseaudio acpi ethtool network-manager 
+Soft : pcmanfm firefox chromium thunderbird filezilla libreoffice liferea ristretto
 Font : awesome-terminal-fonts ttf-font-awesome-4 
 
 #### How To :
