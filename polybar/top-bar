@@ -1,0 +1,36 @@
+width = 100%
+height = 24
+radius = 0.0
+fixed-center = true
+bottom = false
+dim-value = 1.0
+enable-ipc = true
+
+background = ${colors.bg_trans}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = Iosevka Term:weight=regular:pixelsize=10;2
+font-1 = unifont:fontformat=truetype:size=9:antialias=false;0
+font-2 = Iosevka Term:weight=regular:pixelsize=10;1
+font-3 = Iosevka Term:weight=bold:pixelsize=10;1
+font-4 = fontawesome:weight=regular:pixelsize=10;1
+
+tray-position = right
+tray-padding = 2
+tray-transparent = false
+tray-background = #aa000000
+
+cursor-click = pointer
+cursor-scroll = ns-resize

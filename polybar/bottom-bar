@@ -1,0 +1,27 @@
+width = 100%
+height = 24
+radius = 0.0
+fixed-center = true
+bottom = true
+dim-value = 1
+
+background = ${colors.bg_trans}
+foreground = ${colors.foreground}
+
+line-size = 1
+line-color = #f00
+
+border-size = 0
+border-color = #551793D1
+
+padding-left = 2
+padding-right = 4
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Iosevka Term:weight=regular:pixelsize=10;2
+font-1 = unifont:fontformat=truetype:size=9:antialias=false;0
+font-2 = Iosevka Term:weight=regular:pixelsize=10;1
+font-3 = Iosevka Term:weight=bold:pixelsize=10;1
+font-4 = FontAwesome:weight=regular:pixelsize=10;1

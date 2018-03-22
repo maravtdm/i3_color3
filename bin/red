@@ -1,0 +1,6 @@
+#!/bin/sh
+cp ~/.config/polybar/config.red ~/.config/polybar/config
+cp ~/.config/i3/config.red ~/.config/i3/config
+cp ~/.config/alsi/alsi.conf.red ~/.config/alsi/alsi.conf
+
+feh --bg-fill ~/.config/polybar/wallpaper/red1.jpg --bg-fill ~/.config/polybar/wallpaper/red1.jpg

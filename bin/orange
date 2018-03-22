@@ -1,0 +1,6 @@
+#!/bin/sh
+cp ~/.config/polybar/config.orange ~/.config/polybar/config
+cp ~/.config/i3/config.orange ~/.config/i3/config
+cp ~/.config/alsi/alsi.conf.orange ~/.config/alsi/alsi.conf
+
+feh --bg-fill ~/.config/polybar/wallpaper/orange4.jpg --bg-fill ~/.config/polybar/wallpaper/orange4.jpg
