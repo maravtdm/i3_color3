@@ -1,3 +1,4 @@
+
 ;=====================================================
 ;
 ;   To learn more about how to configure Polybar
@@ -24,6 +25,7 @@ red = #ff0000
 orange = #ff9249
 green = #00ff00
 grey = #333333
+grey1 = #808080
 
 vol1 = #ffe4e1
 vol2 = #ff8888
@@ -46,13 +48,14 @@ modules-right = mount filesystem volume backlight trash
 ;;;;;;;;;;;;;;;;;;;;
 
 [bar/bottom]
+
 monitor = ${env:MONITOR:HDMI1}
 include-file = ~/.config/polybar/bottom-bar
 
 ;modules-left = xwindow
 modules-left = kernel xwindow
 modules-center = date-fr
-modules-right = cpu cpu_load temp memory2 eth wifi battery-combined-shell yaourt 
+modules-right = cpu cpu_load temp memory eth wifi battery-combined-shell yaourt 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; MODULES ;;;;;;;;
@@ -73,9 +76,11 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 label-focused = %index%  %icon%
 label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.white}
 label-focused-underline = ${colors.red}
 label-focused-padding = 2
 label-unfocused = %index%  %icon%
+label-unfocused-foreground = ${colors.grey1}
 label-unfocused-padding = 2
 label-visible = %index%  %icon%
 label-visible-background = ${self.label-focused-background}
@@ -146,7 +151,8 @@ interval = 600
 exec = ~/.config/polybar/scripts/kernel.sh
 format = <label>
 ;format-prefix = "  "
-format-prefix = "  "
+;format-prefix = "  "
+format-prefix = " "
 format-prefix-foreground = ${colors.red}
 
 [module/mount]
@@ -186,7 +192,7 @@ bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground}
 format-underline = #ffffff
 
-[module/memory2]
+[module/memory]
 type = internal/memory
 interval = 30
 format = <label>
@@ -200,7 +206,7 @@ format = <label>
 label = %title:0:40:...%
 format-prefix = " "
 format-prefix-foreground = ${colors.red}
-format-padding = 4
+format-padding = 1
 
 [module/date-fr]
 type = custom/script
@@ -310,7 +316,7 @@ format-prefix-foreground = ${colors.red}
 
 [module/temp]
 type = custom/script
-interval = 30
+interval = 10
 exec = ~/.config/polybar/scripts/temp.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.red}
