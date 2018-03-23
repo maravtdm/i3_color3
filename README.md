@@ -12,7 +12,7 @@ Font : awesome-terminal-fonts ttf-font-awesome-4
 
 #### How To :
 - put all files in your ~/.config directory
-- put the bin/ directory in your ~/ and add /home/<user>/bin to your path (i.e in your .bashrc)
+- put the bin/ directory in your ~/ and add /home/USER/bin to your path (i.e in your .bashrc)
 Switch theme by typing : blue, red or orange in a terminal
 Just need to reload i3 to have the correct border color ($mod+Shift+c in my i3 config file)
  
