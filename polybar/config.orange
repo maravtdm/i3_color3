@@ -45,13 +45,12 @@ modules-right = mount filesystem volume backlight trash
 ;;;;;;;;;;;;;;;;;;;;
 
 [bar/bottom]
-
 monitor = ${env:MONITOR:HDMI1}
 include-file = ~/.config/polybar/bottom-bar
 
 modules-left = kernel xwindow
 modules-center = date-fr
-modules-right = cpu cpu_load temp memory2 eth wifi battery-combined-shell yaourt 
+modules-right = cpu cpu_load temp memory eth wifi battery-combined-shell yaourt 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; MODULES ;;;;;;;;
@@ -184,7 +183,7 @@ bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground}
 format-underline = #ffffff
 
-[module/memory2]
+[module/memory]
 type = internal/memory
 interval = 30
 format = <label>
@@ -230,34 +229,6 @@ format-prefix = " "
 format-prefix-foreground = ${colors.orange}
 interval = 30
 
-;[module/temp_core]
-;type = internal/temperature
-;format = <ramp> <label>
-;format-warn = <ramp> <label-warn>
-;interval = 1
-;label = %temperature%
-;label-warn = %temperature%
-;label-warn-foreground = ${colors.red}
-;ramp-0 = 
-;ramp-0-foreground = ${colors.orange}
-;ramp-1 = 
-;ramp-1-foreground = ${colors.orange}
-;ramp-2 = 
-;ramp-2-foreground = ${colors.orange}
-;ramp-3 = 
-;ramp-3-foreground = ${colors.orange}
-;ramp-4 = 
-;ramp-4-foreground = ${colors.orange}
-;thermal-zone = 1
-;warn-temperature = 50
-
-;[module/uptime]
-;type = custom/script
-;exec = ~/.config/polybar/scripts/uptime.sh
-;format-prefix = " "
-;format-prefix-foreground = ${colors.orange}
-;interval = 60
-
 [module/eth]
 type = custom/script
 exec = ~/.config/polybar/scripts/ethernet.sh
@@ -284,13 +255,6 @@ format = <label>
 format-prefix = " " 
 format-prefix-foreground = ${colors.orange}
 label = %percentage%%
-
-;[module/backlight]
-;type = custom/script
-;exec = ~/.config/polybar/scripts/backlight.sh
-;interval = 0.2
-;format-prefix = " " 
-;format-prefix-foreground = ${colors.orange}
 
 [module/battery-combined-shell]
 type = internal/battery
