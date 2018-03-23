@@ -1,3 +1,4 @@
+
 ;=====================================================
 ;
 ;   To learn more about how to configure Polybar
@@ -24,6 +25,7 @@ red = #ff0000
 orange = #ff9249
 green = #00ff00
 grey = #333333
+grey1 = #808080
 
 vol1 = #dbedf4
 vol2 = #7ec5dd
@@ -46,9 +48,11 @@ modules-right = mount filesystem volume backlight trash
 ;;;;;;;;;;;;;;;;;;;;
 
 [bar/bottom]
+
 monitor = ${env:MONITOR:HDMI1}
 include-file = ~/.config/polybar/bottom-bar
 
+;modules-left = xwindow
 modules-left = kernel xwindow
 modules-center = date-fr
 modules-right = cpu cpu_load temp memory eth wifi battery-combined-shell yaourt 
@@ -72,9 +76,11 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 label-focused = %index%  %icon% 
 label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.white}
 label-focused-underline = ${colors.blue}
 label-focused-padding = 2
 label-unfocused = %index%  %icon%
+label-unfocused-foreground = ${colors.grey1}
 label-unfocused-padding = 2
 label-visible = %index%  %icon%
 label-visible-background = ${self.label-focused-background}
@@ -143,7 +149,8 @@ bar-progress-empty-foreground = ${colors.foreground-alt}
 type = custom/script
 interval = 600
 exec = ~/.config/polybar/scripts/kernel.sh
-format-prefix = "  "
+;format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = ${colors.blue}
 
 [module/mount]
@@ -196,7 +203,7 @@ format = <label>
 label = %title:0:40:...%
 format-prefix = " "
 format-prefix-foreground = ${colors.blue}
-format-padding = 4
+format-padding = 1
 
 [module/date-fr]
 type = custom/script
@@ -249,6 +256,7 @@ format-disconnected-prefix-foreground = ${colors.blue}
 
 [module/backlight]
 type = internal/xbacklight
+card = intel_backlight
 enable-scroll = false
 format = <label>
 format-prefix = " " 
@@ -306,7 +314,7 @@ format-prefix-foreground = ${colors.blue}
 
 [module/temp]
 type = custom/script
-interval = 30
+interval = 10
 exec = ~/.config/polybar/scripts/temp.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.blue}
