@@ -6,11 +6,13 @@ Arch Linux
 
 #### Dependencies :
 - i3-gaps-next-git polybar
-- feh alsi compton rofi dmenu ranger terminator urxvt termite ncmpcpp mpd yay lm_sensors pulseaudio acpi ethtool network-manager 
+- feh alsi compton rofi dmenu mpd yay lm_sensors pulseaudio acpi ethtool network-manager siji-git pamixer i3lockmore-git backlight-git arandr 
 
-Soft : pcmanfm firefox chromium thunderbird filezilla libreoffice liferea ristretto
+Soft : pcmanfm firefox chromium thunderbird filezilla libreoffice liferea ristretto ranger terminator rxvt-unicode termite ncmpcpp xautolock numlockx 
 
 Font : awesome-terminal-fonts ttf-font-awesome-4 
+
+Theme : arc-gtk-theme arc-icon-theme
 
 #### How To :
 - put all files in your ~/.config directory
