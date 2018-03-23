@@ -1,3 +1,4 @@
+
 ;=====================================================
 ;
 ;   To learn more about how to configure Polybar
@@ -23,6 +24,7 @@ blue = #1793d1
 red = #ff0000
 orange = #ff9249
 orange1 = #f6caa6
+grey1 = #808080
 
 vol1 = #f8d6ba
 vol2 = #ffb370
@@ -45,6 +47,7 @@ modules-right = mount filesystem volume backlight trash
 ;;;;;;;;;;;;;;;;;;;;
 
 [bar/bottom]
+
 monitor = ${env:MONITOR:HDMI1}
 include-file = ~/.config/polybar/bottom-bar
 
@@ -71,9 +74,11 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 label-focused = %index%  %icon%
 label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.white}
 label-focused-underline = ${colors.orange}
 label-focused-padding = 2
 label-unfocused = %index%  %icon%
+label-unfocused-foreground = ${colors.grey1}
 label-unfocused-padding = 2
 label-visible = %index%  %icon%
 label-visible-background = ${self.label-focused-background}
@@ -143,7 +148,8 @@ type = custom/script
 interval = 600
 exec = ~/.config/polybar/scripts/kernel.sh
 format = <label>
-format-prefix = "  "
+;format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = ${colors.orange}
 
 [module/mount]
@@ -197,7 +203,7 @@ format = <label>
 label = %title:0:40:...%
 format-prefix = " "
 format-prefix-foreground = ${colors.orange}
-format-padding = 4
+format-padding = 1
 
 [module/date-fr]
 type = custom/script
@@ -307,7 +313,7 @@ format-prefix-foreground = ${colors.orange}
 
 [module/temp]
 type = custom/script
-interval = 30
+interval = 10
 exec = ~/.config/polybar/scripts/temp.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.orange}
