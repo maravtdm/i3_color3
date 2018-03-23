@@ -46,7 +46,6 @@ modules-right = mount filesystem volume backlight trash
 ;;;;;;;;;;;;;;;;;;;;
 
 [bar/bottom]
-
 monitor = ${env:MONITOR:HDMI1}
 include-file = ~/.config/polybar/bottom-bar
 
@@ -233,34 +232,6 @@ format-prefix = " "
 format-prefix-foreground = ${colors.red}
 interval = 30
 
-;[module/temp_core]
-;type = internal/temperature
-;format = <ramp> <label>
-;format-warn = <ramp> <label-warn>
-;interval = 1
-;label = %temperature%
-;label-warn = %temperature%
-;label-warn-foreground = ${colors.red}
-;ramp-0 = 
-;ramp-0-foreground = ${colors.red}
-;ramp-1 = 
-;ramp-1-foreground = ${colors.red}
-;ramp-2 = 
-;ramp-2-foreground = ${colors.red}
-;ramp-3 = 
-;ramp-3-foreground = ${colors.red}
-;ramp-4 = 
-;ramp-4-foreground = ${colors.red}
-;thermal-zone = 1
-;warn-temperature = 50
-
-;[module/uptime]
-;type = custom/script
-;exec = ~/.config/polybar/scripts/uptime.sh
-;format-prefix = " "
-;format-prefix-foreground = ${colors.red}
-;interval = 60
-
 [module/eth]
 type = custom/script
 exec = ~/.config/polybar/scripts/ethernet.sh
@@ -287,13 +258,6 @@ format = <label>
 format-prefix = " " 
 format-prefix-foreground = ${colors.red}
 label = %percentage%%
-
-;[module/backlight]
-;type = custom/script
-;exec = ~/.config/polybar/scripts/backlight.sh
-;interval = 0.2
-;format-prefix = " " 
-;format-prefix-foreground = ${colors.red}
 
 [module/battery-combined-shell]
 type = internal/battery
