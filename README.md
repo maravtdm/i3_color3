@@ -6,8 +6,10 @@ Arch Linux
 
 #### Dependencies :
 - i3-gaps-next-git polybar
-- feh alsi compton rofi dmenu ranger terminator urxvt termite ncmpcpp mpd light yay lm_sensors pulseaudio acpi ethtool network-manager 
+- feh alsi compton rofi dmenu ranger terminator urxvt termite ncmpcpp mpd yay lm_sensors pulseaudio acpi ethtool network-manager 
+
 Soft : pcmanfm firefox chromium thunderbird filezilla libreoffice liferea ristretto
+
 Font : awesome-terminal-fonts ttf-font-awesome-4 
 
 #### How To :
@@ -15,7 +17,9 @@ Font : awesome-terminal-fonts ttf-font-awesome-4
 - put the bin/ directory in your ~/ and add /home/USER/bin to your path (i.e in your .bashrc)
 Switch theme by typing : blue, red or orange in a terminal
 Just need to reload i3 to have the right window border color ($mod+Shift+c in my i3 config file)
- 
+
+- Yay can be replaced by yaourt or trizen, in the yaourt.sh script
+
  
 Blue Nazgul 
 ![Nazgul](screen_blue.png?raw=true "Blue Nazgul")
