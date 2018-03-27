@@ -5,7 +5,7 @@ xset -b &
 setxkbmap -layout fr
 numlockx on &
 pactl set-sink-volume 0 '41%' &
-compton --config ~/.config/compton/compton.conf &
+compton --config ~/.config/i3/compton.conf &
 sh ~/.config/arandr.sh &
 sh ~/.config/polybar/launch.sh &
 
