@@ -28,7 +28,7 @@ font-3 = Iosevka Term:weight=bold:pixelsize=10;1
 font-4 = fontawesome:weight=regular:pixelsize=10;1
 
 tray-position = right
-tray-padding = 2
+tray-padding = 1
 tray-transparent = false
 tray-background = #aa000000
 
