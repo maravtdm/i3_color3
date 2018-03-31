@@ -1,4 +1,3 @@
-
 ;=====================================================
 ;
 ;   To learn more about how to configure Polybar
@@ -22,6 +21,9 @@ black = #000000
 white = #ffffff
 blue = #1793d1
 red = #ff0000
+yellow = #ffff00
+pink = #7fffd4
+lightgrey = #666666
 orange = #ff9249
 green = #00ff00
 grey = #333333
@@ -37,7 +39,7 @@ vol3 = #ff0000
 
 [bar/top]
 monitor = ${env:MONITOR:HDMI1}
-include-file = ~/.config/polybar/top-bar
+include-file = $HOME/.config/polybar/top-bar
 
 modules-left = i3
 modules-center = mpd
@@ -50,12 +52,13 @@ modules-right = mount filesystem volume backlight trash
 [bar/bottom]
 
 monitor = ${env:MONITOR:HDMI1}
-include-file = ~/.config/polybar/bottom-bar
+include-file = $HOME/.config/polybar/bottom-bar
 
 ;modules-left = xwindow
 modules-left = kernel xwindow
 modules-center = date-fr
-modules-right = cpu cpu_load temp memory eth wifi battery-combined-shell yaourt 
+;modules-right = cpu cpu_load temp memory eth wifi battery-combined-shell yaourt 
+modules-right = process temp memory eth wifi battery-combined-shell yaourt 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; MODULES ;;;;;;;;
@@ -111,7 +114,7 @@ icon-play-foreground = ${colors.red}
 icon-pause = 
 icon-pause-foreground = ${colors.red}
 icon-stop = 
-icon-stop-foreground = ${colors.orange}
+icon-stop-foreground = ${colors.lightgrey}
 icon-prev = 
 icon-next = 
 icon-seekb = 
@@ -148,7 +151,7 @@ bar-progress-empty-foreground = ${colors.foreground-alt}
 [module/kernel]
 type = custom/script
 interval = 600
-exec = ~/.config/polybar/scripts/kernel.sh
+exec = $HOME/.config/polybar/scripts/kernel.sh
 format = <label>
 ;format-prefix = "  "
 ;format-prefix = "  "
@@ -158,7 +161,7 @@ format-prefix-foreground = ${colors.red}
 [module/mount]
 type = custom/script
 interval = 10
-exec = ~/.config/polybar/scripts/mount.sh
+exec = $HOME/.config/polybar/scripts/mount.sh
 format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.red}
@@ -194,7 +197,7 @@ format-underline = #ffffff
 
 [module/memory]
 type = internal/memory
-interval = 30
+interval = 10
 format = <label>
 label =  %gb_used% 
 format-prefix = " "
@@ -215,47 +218,61 @@ exec = TZ=Europe/Paris date +"%A %d %b  %{F#ff0000}%{F-} %H:%M"
 format-prefix = "  " 
 format-prefix-foreground = ${colors.red}
 
+[module/process]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/process.sh
+format-prefix = " "
+format-prefix-foreground = ${colors.red}
+interval = 10
+
 [module/filesystem]
 type = internal/fs
-interval = 30
+interval = 10
 mount-0 = /
 mount-1 = /home
 label-mounted = %{F-} %{F#ff0000} %{F-}%mountpoint% %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/cpu]
-type = internal/cpu
-interval = 1
-label = %percentage:4%%
-format-prefix = 
-format-prefix-foreground = ${colors.red}
+;[module/cpu]
+;type = internal/cpu
+;interval = 1
+;label = %percentage:4%%
+;format-prefix = 
+;format-prefix-foreground = ${colors.red}
 
-[module/cpu_load]
-type = custom/script
-exec = ~/.config/polybar/scripts/cpuloadavg.sh
-format-prefix = " "
-format-prefix-foreground = ${colors.red}
-interval = 30
+;[module/cpu_load]
+;type = custom/script
+;exec = $HOME/.config/polybar/scripts/cpuloadavg.sh
+;format-prefix = " "
+;format-prefix-foreground = ${colors.red}
+;interval = 30
 
 [module/eth]
 type = custom/script
-exec = ~/.config/polybar/scripts/ethernet.sh
+exec = $HOME/.config/polybar/scripts/ethernet.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.red}
-interval = 30
+interval = 10
+
+;[module/wifi]
+;type = internal/network
+;interface = wlp1s0
+;interval = 30
+;format-connected-prefix = " "
+;label-connected = %essid% 
+;;%quality%% %local_ip% %essid% %signal%dB
+;format-connected-prefix-foreground = ${colors.red}
+;format-disconnected-prefix = " "
+;format-disconnected = " "
+;format-disconnected-prefix-foreground = ${colors.red}
 
 [module/wifi]
-type = internal/network
-interface = wlp1s0
-interval = 30
-format-connected-prefix = " "
-label-connected = %essid% 
-;%quality%% %local_ip% %essid% %signal%dB
-format-connected-prefix-foreground = ${colors.red}
-format-disconnected-prefix = " "
-format-disconnected = " "
-format-disconnected-prefix-foreground = ${colors.red}
+type = custom/script
+exec = $HOME/.config/polybar/scripts/wifi.sh
+format-prefix = " "
+format-prefix-foreground = ${colors.red}
+interval = 0.5
 
 [module/backlight]
 type = internal/xbacklight
@@ -272,7 +289,7 @@ battery = BAT1
 adapter = ACAD
 poll-interval = 5
 time-format = %H:%M
-interval = 30
+interval = 10
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
@@ -309,21 +326,21 @@ animation-charging-framerate = 500
 
 [module/trash]
 type = custom/script
-interval = 30
-exec = ~/.config/polybar/scripts/trash.sh
+interval = 10
+exec = $HOME/.config/polybar/scripts/trash.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.red}
 
 [module/temp]
 type = custom/script
 interval = 10
-exec = ~/.config/polybar/scripts/temp.sh
+exec = $HOME/.config/polybar/scripts/temp.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.red}
 
 [module/yaourt]
 type = custom/script
-exec = ~/.config/polybar/scripts/yaourt.sh
+exec = $HOME/.config/polybar/scripts/yaourt.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.red}
 interval = 60
