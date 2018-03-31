@@ -16,6 +16,8 @@ if [ "$status" == "connected" ]; then
         MONITOR=$m polybar --reload bottom &
 else
 	m="eDP1"
+#	MONITOR=$m polybar -l info --reload top > ~/.config/polybar/top.log 2>&1 &
 	MONITOR=$m polybar --reload top &
+#        MONITOR=$m polybar -l info --reload bottom > ~/.config/polybar/bottom.log 2>&1 &
         MONITOR=$m polybar --reload bottom &
 fi
