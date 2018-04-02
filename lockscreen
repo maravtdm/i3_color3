@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Put this script in your $HOME/.local/bin folder
 # if "off" is given as parameter, then spawn a new thread to turn off the screen
 [ "$1" = "off" ] && $(sleep 5 && xset dpms force off) &
 
