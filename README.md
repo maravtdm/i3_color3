@@ -4,6 +4,13 @@
 Conf : 
 Arch Linux
 
+NB : for executing sudo cmd in the i3/config file, edit /etc/sudoers file and comment (#) or modify the line :
+Defaults requiretty
+With
+Defaults !requiretty
+or
+#Defaults requiretty
+
 #### Dependencies :
 - i3-gaps-next-git polybar
 - feh alsi compton rofi dmenu mpd yay lm_sensors pulseaudio acpi ethtool network-manager siji-git pamixer i3lockmore-git backlight-git arandr 
