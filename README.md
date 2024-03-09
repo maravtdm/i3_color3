@@ -36,15 +36,15 @@ Just need to reload i3 to have the right window border color ($mod+Shift+c in my
  
 Blue Nazgul 
 ![Nazgul](screen_blue.png?raw=true "Blue Nazgul")
-Wallpaper [here](https://wallup.net/wp-content/uploads/2016/01/14104-horse-Nazg%C3%BBl-The_Lord_of_the_Rings.jpg)
+  
 
 Orange Hill
 ![Orange](screen_orange.png?raw=true "Orange Hill")
-Wallpaper [here](https://wallup.net/preview/?wallpaper=sunset-nature-silhouette-trees-water-calm-dark-orange-hill)
+  
 
 Dark Red
 ![Red](screen_red.png?raw=true "Red Dark")
-Wallpaper [here](https://wallpaperdata.com/dark-wallpaper-1920x1080.html/dark-wallpaper-1920x1080-1920x1-wtg30315388?lang=pt)
+  
 
  
  
