@@ -36,7 +36,7 @@ Just need to reload i3 to have the right window border color ($mod+Shift+c in my
  
 Blue Nazgul 
 ![Nazgul](screen_blue.png?raw=true "Blue Nazgul")
-Wallpaper [here](https://k60.kn3.net/taringa/7/7/6/8/3/A/VCLR/841.jpg)
+Wallpaper [here](https://wallup.net/wp-content/uploads/2016/01/14104-horse-Nazg%C3%BBl-The_Lord_of_the_Rings.jpg)
 
 Orange Hill
 ![Orange](screen_orange.png?raw=true "Orange Hill")
